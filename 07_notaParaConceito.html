@@ -10,11 +10,17 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = Number(prompt(`Informe uma nota de 0 a 10.0.`));
 
     //Processamento
+    let mensagemFinal = (10.0 <= nota >= 9.0) ? `Você conseguiu o conceito A!`
+        : (8.9 <= nota >= 8.0) ? `Você conseguiu o conceito B!`
+            : (7.9 <= nota >= 7.0) ? `Você conseguiu o conceito C!`
+                : (6.9 <= nota >= 6.0) ? `Você conseguiu o conceito D!`
+                    : (0 <= nota <= 5.9) ? `Você conseguiu o conceito E!`
+                        : `Você fez algo de errado.`
 
-    
     //Saída
+    document.write(mensagemFinal);
 
 </script>

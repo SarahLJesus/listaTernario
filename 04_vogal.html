@@ -4,11 +4,13 @@
     //Construa um programa que leia um caractere e informe se este caractere é uma vogal.
 
     //Entrada
-
+    const caractere = prompt(`Diga um caractere.`);
 
     //Processamento
+    let mensagemFinal = (caractere === "a") || (caractere === "e") || (caractere === "i") || (caractere === "o") || (caractere === "u") ? `${caractere} é uma vogal.`
+        : `${caractere} não é uma vogal.`
 
-    
     //Saída
-
+    document.write(mensagemFinal);
+    
 </script>

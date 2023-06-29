@@ -8,11 +8,16 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
+    const horaTrabalhadaSemana = Number(prompt(`Informe a quantidade de horas trabalhadas semanalmente.`));
+    const horaTrabalhada = Number(prompt(`Informe quanto você recebe por hora trabalhada.`));
 
     //Processamento
+    let mensagemFinal = (45 <= horaTrabalhadaSemana) ? `Você não tem adicional, e seu salário semanal será de R$ ${horaTrabalhada * horaTrabalhadaSemana}!`
+        : (60 <= horaTrabalhadaSemana) ? `Você terá um adicional de 20%, e seu salário semanal será de r$ ${horaTrabalhada * horaTrabalhadaSemana * 1.20}!`
+            : (60 > horaTrabalhadaSemana) ? `Você terá um adicional de 30%, e seu salário semanal será de r$ ${horaTrabalhada * horaTrabalhadaSemana * 1.30}!`
+                : `Você fez algo de errado.`
 
-    
     //Saída
+    document.write(mensagemFinal);
 
 </script>

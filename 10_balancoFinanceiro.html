@@ -7,14 +7,21 @@
     // - Conta de telefone
     // - Supermercado
     // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
-    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    // Verifique se o usuário ganha mais do que recebe e apresente em tela,
+    // indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
+    const despesaAgua = Number(prompt(`Informe o quanto você gasta com a despesa de água.`));
+    const despesaEnergia = Number(prompt(`Informe o quanto você gasta com a despesa de energia elétrica.`));
+    const telefone = Number(prompt(`Informe o quanto você gasta com a despesa de telefone.`));
+    const supermercado = Number(prompt(`Informe o quanto você gasta com a despesa do supermercado.`));
+    const salario = Number(prompt(`Informe o quanto você ganha de salário mensal.`));
 
     //Processamento
+    let mensagemFinal = (salario > despesaAgua + despesaEnergia + telefone + supermercado) ? `Você conseguirá pagar suas contas e sobrará R$ ${salario - (despesaAgua + despesaEnergia + telefone + supermercado)}.`
+        : `Você não conseguiu pagar as suas contas, pois faltou R$ ${(despesaAgua + despesaEnergia + telefone + supermercado) - salario}.`
 
-    
     //Saída
-    
+    document.write(mensagemFinal);
+
 </script>
